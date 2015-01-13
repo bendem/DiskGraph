@@ -8,7 +8,7 @@
 #include "term.hpp"
 
 #ifndef VERSION
-# define VERSION "1.0"
+# define VERSION "1.1"
 #endif
 
 #define GRAPH_CHAR '='
@@ -18,11 +18,12 @@ using namespace std;
 int main(int argc, char** argv) {
     bool all = false;
     if(argc == 2) {
-        if(strcmp("-v", argv[1]) == 0) {
+        string arg(argv[1]);
+        if("-v" == arg) {
             cout << " Disk graphs by bendem, v" << VERSION << endl;
             return 0;
         }
-        if(strcmp("-h", argv[1]) == 0) {
+        if("-h" == arg) {
             cout
                 << " -h to get help" << endl
                 << " -a to print all mounted partitions" << endl
@@ -30,7 +31,7 @@ int main(int argc, char** argv) {
                 ;
             return 0;
         }
-        if(strcmp("-a", argv[1]) == 0) {
+        if("-a" == arg) {
             all = true;
         }
     }
