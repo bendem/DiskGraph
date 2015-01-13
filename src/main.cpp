@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
     const unsigned width = t.getTotalWidth();
     const TermSize ts = termSize();
     if(ts.width < width) {
-        cout << "Not enough space" << endl;
+        cout << "Terminal too small" << endl;
         return 0;
     }
     const unsigned graphWidth = ts.width - width - 2;
