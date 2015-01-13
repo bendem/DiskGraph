@@ -1,6 +1,9 @@
 #include "string_manips.hpp"
 
 string displayGraph(unsigned percent, unsigned width, char graphChar) {
+    if(width <= 2) {
+        return "";
+    }
     ostringstream ss;
     ss << '[' << GREEN;
     bool empty = false;

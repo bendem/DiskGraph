@@ -69,6 +69,10 @@ int main(int argc, char** argv) {
 
     const unsigned width = t.getTotalWidth();
     const TermSize ts = termSize();
+    if(ts.width < width) {
+        cout << "Not enough space" << endl;
+        return 0;
+    }
     const unsigned graphWidth = ts.width - width - 2;
     for(unsigned i = 0; i < percents.size(); ++i) {
         cout << ' ' << displayGraph(percents[i], graphWidth, GRAPH_CHAR) << t.getLine(i) << endl;

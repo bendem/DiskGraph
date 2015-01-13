@@ -1,8 +1,8 @@
 #include "table.hpp"
 
-Table::Table(int columns) : columns(columns) {
+Table::Table(unsigned columns) : columns(columns) {
     this->line_sizes.reserve(columns);
-    for(int i = 0; i < columns; ++i) {
+    for(unsigned i = 0; i < columns; ++i) {
         this->line_sizes.push_back(0);
     }
     this->lines.reserve(columns);

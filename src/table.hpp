@@ -17,7 +17,7 @@ private:
     vector<unsigned> line_sizes;
 
 public:
-    Table(int);
+    Table(unsigned);
     Table& addLine(vector<string>);
     unsigned getWidth(unsigned) const;
     unsigned getTotalWidth() const;
