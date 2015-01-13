@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
             cout
                 << " -h to get help" << endl
                 << " -a to print all mounted partitions" << endl
-                << " -v to get version"
+                << " -v to get version" << endl
                 ;
             return 0;
         }
