@@ -12,7 +12,7 @@ using namespace std;
 class Table {
 
 private:
-    const int columns;
+    const unsigned columns;
     vector< vector<string> > lines;
     vector<unsigned> line_sizes;
 

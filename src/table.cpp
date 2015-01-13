@@ -31,7 +31,7 @@ unsigned Table::getTotalWidth() const {
 
 string Table::getLine(unsigned column) const {
     ostringstream ss;
-    for(int i = 0; i < this->columns; ++i) {
+    for(unsigned i = 0; i < this->columns; ++i) {
         ss << ' ';
         ss << this->lines[column][i];
         int diff = (int) (this->line_sizes[i] - this->lines[column][i].length());

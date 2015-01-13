@@ -1,4 +1,4 @@
-FLA = --std=c++11
+FLA = -std=c++11 -Wall
 COM = g++ $(FLA)
 SRC = src
 
