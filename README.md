@@ -1,5 +1,7 @@
 # DiskGraph
 
+![img](https://i.imgur.com/PgS63HL.png)
+
 DiskGraph is a wrapper around the df command to make pretty graphs
 
 # Compilation
