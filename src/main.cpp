@@ -16,14 +16,22 @@
 using namespace std;
 
 int main(int argc, char** argv) {
+    bool all = false;
     if(argc == 2) {
         if(strcmp("-v", argv[1]) == 0) {
             cout << " Disk graphs by bendem, v" << VERSION << endl;
             return 0;
         }
         if(strcmp("-h", argv[1]) == 0) {
-            cout << " Remove that '-h', just '" << argv[0] << "'..." << endl;
+            cout
+                << " -h to get help" << endl
+                << " -a to print all mounted partitions" << endl
+                << " -v to get version"
+                ;
             return 0;
+        }
+        if(strcmp("-a", argv[1]) == 0) {
+            all = true;
         }
     }
     vector<string> output(exec("df --portability"));
@@ -40,7 +48,7 @@ int main(int argc, char** argv) {
         }
 
         vector<string> fields = split(line, ' ', 6);
-        if(fields[0].substr(0, 5) != "/dev/") {
+        if(!all && fields[0].substr(0, 5) != "/dev/") {
             continue;
         }
 
