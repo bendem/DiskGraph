@@ -1,5 +1,7 @@
-FLA = -std=c++11 -Wall
-COM = g++ $(FLA)
+FLA += -std=c++11 -Wall
+CXX ?= g++
+PREFIX ?= /usr
+COM = $(CXX) $(FLA)
 SRC = src
 
 dg: $(SRC)/main.cpp term.o string_manips.o table.o
@@ -9,4 +11,4 @@ dg: $(SRC)/main.cpp term.o string_manips.o table.o
 	$(COM) -c -o $@ $<
 
 install:
-	cp -u dg /usr/bin
+	cp -u dg "$(PREFIX)/bin"
